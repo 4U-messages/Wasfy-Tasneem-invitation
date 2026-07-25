@@ -6,6 +6,8 @@ const bgMusic = new Audio('assets/background-music.mp3');
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
 
+let isPlaying = false;
+
 /* ==========================
    PRELOADER
 ========================== */
@@ -18,11 +20,44 @@ window.addEventListener("load", () => {
 
         // Play background music
         bgMusic.play().catch(err => console.log("Autoplay might be blocked"));
+        isPlaying = true;
+        updateMusicButton();
 
         loader.style.opacity = "0";
         loader.style.visibility = "hidden";
 
     }, 1800);
+
+});
+
+
+/* ==========================
+   MUSIC CONTROL BUTTON
+========================== */
+
+const musicBtn = document.getElementById("musicBtn");
+
+function updateMusicButton(){
+
+    if(isPlaying){
+        musicBtn.classList.add("playing");
+    } else {
+        musicBtn.classList.remove("playing");
+    }
+
+}
+
+musicBtn.addEventListener("click", () => {
+
+    if(isPlaying){
+        bgMusic.pause();
+        isPlaying = false;
+    } else {
+        bgMusic.play();
+        isPlaying = true;
+    }
+
+    updateMusicButton();
 
 });
 
