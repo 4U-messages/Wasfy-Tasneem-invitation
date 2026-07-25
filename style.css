@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+
+    --bg:#f8f5f0;
+    --white:#ffffff;
+    --gold:#c9a86a;
+    --gold-light:#e8d2a0;
+    --brown:#49372b;
+    --text:#6d5b4d;
+
+    --shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--brown);
+
+    overflow-x:hidden;
+
+}
+
+/* ================= Background ================= */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    background:
+
+        radial-gradient(circle at top left,#fffdf9 0%,transparent 40%),
+
+        radial-gradient(circle at bottom right,#efe2d0 0%,transparent 40%),
+
+        linear-gradient(135deg,#f9f5ef,#f2ebe1);
+
+}
+
+/* ================= Opening ================= */
+
+#opening{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(3px);
+
+}
+
+.opening-content{
+
+    position:relative;
+
+    z-index:2;
+
+    animation:fadeUp 1.2s ease;
+
+    max-width:700px;
+
+    padding:20px;
+
+}
+
+.monogram{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:70px;
+
+    line-height:1;
+
+    margin-bottom:30px;
+
+}
+
+.monogram div{
+
+    font-size:35px;
+
+    margin:8px 0;
+
+}
+
+.engagement{
+
+    letter-spacing:7px;
+
+    text-transform:uppercase;
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    margin-bottom:20px;
+
+}
+
+.opening-content h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:90px;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+}
+
+.opening-content h1 span{
+
+    display:block;
+
+    color:var(--gold);
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    margin:8px 0;
+
+}
+
+.subtitle{
+
+    margin:35px auto;
+
+    max-width:520px;
+
+    line-height:2;
+
+    color:var(--text);
+
+}
+
+#openInvitation{
+
+    border:none;
+
+    padding:18px 52px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,var(--gold),#b58b47);
+
+    color:#fff;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(201,168,106,.35);
+
+}
+
+#openInvitation:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 22px 45px rgba(201,168,106,.45);
+
+}
+
+/* ================= Main ================= */
+
+#main{
+
+    display:none;
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+#main.show{
+
+    display:block;
+
+    opacity:1;
+
+}
+
+.hero{
+
+    padding:90px 20px 40px;
+
+}
+
+.invite-image{
+
+    width:100%;
+
+    max-width:620px;
+
+    display:block;
+
+    margin:auto;
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+    transition:.5s;
+
+}
+
+.invite-image:hover{
+
+    transform:translateY(-8px);
+
+}
+/* ================= Countdown ================= */
+
+.countdown-section{
+
+    padding:70px 20px;
+
+    text-align:center;
+
+}
+
+.countdown-section h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:52px;
+
+    font-weight:600;
+
+    margin-bottom:45px;
+
+    color:var(--brown);
+
+}
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+}
+
+.countdown div{
+
+    width:120px;
+
+    height:120px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    border-radius:28px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.countdown div:hover{
+
+    transform:translateY(-8px) scale(1.04);
+
+    box-shadow:0 28px 55px rgba(0,0,0,.12);
+
+}
+
+.countdown span{
+
+    font-size:42px;
+
+    font-weight:600;
+
+    color:var(--gold);
+
+}
+
+.countdown small{
+
+    margin-top:8px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:var(--text);
+
+}
+
+/* ================= Calendar ================= */
+
+.calendar{
+
+    padding:40px 20px 70px;
+
+}
+
+.calendar-image{
+
+    width:100%;
+
+    max-width:600px;
+
+    display:block;
+
+    margin:auto;
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+    transition:.45s;
+
+}
+
+.calendar-image:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ================= Details ================= */
+
+.details{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+}
+
+.details h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:48px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    max-width:420px;
+
+    margin:auto;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.9);
+
+    box-shadow:var(--shadow);
+
+}
+
+.card h3{
+
+    font-family:'Cinzel',serif;
+
+    font-size:34px;
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:var(--text);
+
+}
+
+/* ================= Location ================= */
+
+.location{
+
+    padding:70px 20px;
+
+    text-align:center;
+
+}
+
+.location h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:48px;
+
+    margin-bottom:35px;
+
+}
+
+.location-card{
+
+    max-width:500px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.location-card i{
+
+    font-size:42px;
+
+    color:var(--gold);
+
+    margin-bottom:18px;
+
+}
+
+.location-card h3{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.location-card p{
+
+    color:var(--text);
+
+    margin-bottom:30px;
+
+}
+
+.location-card a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:15px 38px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,var(--gold),#b58b47);
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.location-card a:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ================= Footer ================= */
+
+footer{
+
+    padding:90px 20px 60px;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:var(--text);
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+
+footer h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:60px;
+
+    color:var(--gold);
+
+}
+/* ================= Music Button ================= */
+
+#musicBtn{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    color:var(--gold);
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+#musicBtn:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    background:var(--gold);
+
+    color:#fff;
+
+}
+
+/* ================= Premium Scrollbar ================= */
+
+html{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:var(--gold) #f4eee5;
+
+}
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f4eee5;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        180deg,
+        #e7d2a3,
+        #c9a86a,
+        #ab7d3a
+    );
+
+    border-radius:50px;
+
+    border:2px solid #f4eee5;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:linear-gradient(
+        180deg,
+        #f2dfb8,
+        #d4af68,
+        #b98a3e
+    );
+
+}
+
+/* ================= Fade Animation ================= */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s ease;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ================= Keyframes ================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.invite-image,
+
+.calendar-image{
+
+    animation:float 6s ease-in-out infinite;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:992px){
+
+    .opening-content h1{
+
+        font-size:70px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .opening-content h1{
+
+        font-size:55px;
+
+    }
+
+    .opening-content h1 span{
+
+        font-size:45px;
+
+    }
+
+    .countdown{
+
+        gap:15px;
+
+    }
+
+    .countdown div{
+
+        width:95px;
+
+        height:95px;
+
+    }
+
+    .countdown span{
+
+        font-size:32px;
+
+    }
+
+    .countdown-section h2,
+
+    .details h2,
+
+    .location h2{
+
+        font-size:38px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .opening-content h1{
+
+        font-size:42px;
+
+    }
+
+    .opening-content h1 span{
+
+        font-size:34px;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+    }
+
+    .countdown div{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+    .countdown span{
+
+        font-size:26px;
+
+    }
+
+    .card,
+
+    .location-card{
+
+        padding:30px;
+
+    }
+
+    #musicBtn{
+
+        width:48px;
+
+        height:48px;
+
+        top:18px;
+
+        right:18px;
+
+    }
+
+}
+
+.venue-image{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.venue-image img{
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    object-fit: cover;
+}
