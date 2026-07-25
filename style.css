@@ -1,0 +1,549 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#faf7f2;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+
+/* ===========================
+   LOADER
+=========================== */
+
+#loader{
+
+    position:fixed;
+    inset:0;
+    background:#faf7f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:.8s;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-content h1{
+
+    font-family:'Great Vibes',cursive;
+    color:#b88b3a;
+    font-size:60px;
+    font-weight:400;
+
+}
+
+.loader-content span{
+
+    font-size:45px;
+    color:#b88b3a;
+    display:block;
+    margin:10px 0;
+
+}
+
+.loader-content p{
+
+    color:#666;
+    letter-spacing:3px;
+    margin-top:25px;
+
+}
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+}
+
+.hero-bg{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:1;
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:2;
+    text-align:center;
+    animation:fadeUp 1.4s;
+
+}
+
+.small-title{
+
+    letter-spacing:5px;
+    font-size:13px;
+
+}
+
+.hero h2{
+
+    margin-top:15px;
+
+    font-size:55px;
+
+    letter-spacing:4px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.hero h3{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:45px;
+
+    color:#eac16d;
+
+    margin-bottom:35px;
+
+}
+
+.honoring{
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+
+    font-size:13px;
+
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:80px;
+
+    font-weight:400;
+
+}
+
+.and{
+
+    display:block;
+
+    color:#eac16d;
+
+    font-size:42px;
+
+    margin:10px 0;
+
+}
+
+.event-info{
+
+    margin-top:40px;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+.event-info .location{
+
+    font-size:16px;
+    color:#eac16d;
+    letter-spacing:2px;
+    margin-top:20px;
+
+}
+
+.scroll-btn{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:16px 38px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border:1px solid #fff;
+
+    border-radius:50px;
+
+    transition:.4s;
+
+}
+
+.scroll-btn:hover{
+
+    background:#eac16d;
+
+    border-color:#eac16d;
+
+    color:#111;
+
+}
+
+
+/* ===========================
+   CALENDAR
+=========================== */
+
+.calendar-section{
+
+    background:#faf7f2;
+
+    color:#222;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    padding:80px 20px;
+
+}
+
+.calendar-container{
+
+    position:relative;
+    width:340px;
+    max-width:95%;
+
+}
+
+.calendar-card{
+
+    position:relative;
+    width:100%;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.calendar-card img{
+
+    width:100%;
+    display:block;
+
+}
+
+.heart-overlay{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:48px;
+    animation:heartBeat 1.2s ease-in-out infinite;
+    z-index:10;
+
+}
+
+.calendar-text{
+
+    text-align:center;
+
+    margin-top:45px;
+
+}
+
+.calendar-text h2{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#b88b3a;
+
+    font-size:58px;
+
+}
+
+.calendar-text p{
+
+    margin-top:15px;
+
+    color:#555;
+
+    font-size:22px;
+
+}
+
+.time{
+
+    margin-top:30px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    line-height:2;
+    color:#222;
+
+}
+
+.location-details{
+
+    margin-top:30px;
+    padding:20px;
+    background:rgba(184,139,58,0.1);
+    border-radius:10px;
+    color:#b88b3a;
+    font-weight:500;
+
+}
+
+.location-details p{
+
+    color:#b88b3a;
+    margin:5px 0;
+
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#111;
+
+    color:#bbb;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+footer strong{
+
+    color:#eac16d;
+
+}
+
+
+/* ===========================
+   FLOWERS
+=========================== */
+
+.flowers{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:5;
+
+}
+
+.flowers span{
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    animation:float 15s linear infinite;
+
+}
+
+
+/* ===========================
+   SCROLL ANIMATION
+=========================== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Button Glow */
+
+.glow{
+    box-shadow:0 0 25px rgba(234,193,109,.7);
+}
+
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:translateY(110vh) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(-120px) rotate(360deg);
+
+    }
+
+}
+
+@keyframes heartBeat{
+
+    0%{
+        transform:translate(-50%, -50%) scale(1);
+    }
+
+    50%{
+        transform:translate(-50%, -50%) scale(1.2);
+    }
+
+    100%{
+        transform:translate(-50%, -50%) scale(1);
+    }
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.hero h2{
+
+    font-size:40px;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+}
+
+.hero h3{
+
+    font-size:35px;
+
+}
+
+.event-info{
+    font-size:16px;
+}
+
+.event-info .location{
+    font-size:14px;
+}
+
+.calendar-text h2{
+
+    font-size:42px;
+
+}
+
+.calendar-text p{
+
+    font-size:18px;
+
+}
+
+.time{
+    font-size:16px;
+}
+
+.scroll-btn{
+
+    padding:14px 30px;
+
+}
+
+.heart-overlay{
+    font-size:36px;
+}
+
+}
