@@ -18,8 +18,12 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        // Play background music
-        bgMusic.play().catch(err => console.log("Autoplay might be blocked"));
+        // Play background music automatically
+        bgMusic.play().catch(err => {
+            console.log("Autoplay blocked by browser - will play on user interaction");
+            // Wait for user interaction to play
+            document.addEventListener("click", playMusicOnce);
+        });
         isPlaying = true;
         updateMusicButton();
 
@@ -30,6 +34,15 @@ window.addEventListener("load", () => {
 
 });
 
+// Function to play music on first user interaction
+function playMusicOnce() {
+    if(!isPlaying) {
+        bgMusic.play();
+        isPlaying = true;
+        updateMusicButton();
+        document.removeEventListener("click", playMusicOnce);
+    }
+}
 
 /* ==========================
    MUSIC CONTROL BUTTON
