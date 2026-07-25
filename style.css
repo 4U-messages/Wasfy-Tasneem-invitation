@@ -1,0 +1,770 @@
+/* ===========================
+   Google Fonts
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+/* ===========================
+   Variables
+=========================== */
+
+:root{
+
+    --gold:#d4af37;
+    --gold-light:#f7d774;
+    --black:#090909;
+    --white:#ffffff;
+    --text:#d8d8d8;
+
+}
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:#090909;
+    color:white;
+    overflow-x:hidden;
+    font-family:'Montserrat',sans-serif;
+
+}
+
+/* ===========================
+   Animated Background
+=========================== */
+
+.background{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#262626 0%,#090909 65%);
+
+    z-index:-3;
+
+}
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:800px;
+    height:800px;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,.08);
+
+    filter:blur(140px);
+
+    left:-250px;
+    top:-250px;
+
+    animation:moveOne 18s ease-in-out infinite;
+
+}
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,.05);
+
+    filter:blur(120px);
+
+    right:-180px;
+    bottom:-180px;
+
+    animation:moveTwo 20s ease-in-out infinite;
+
+}
+
+/* ===========================
+   Intro Section
+=========================== */
+
+.intro{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    transition:1s;
+
+}
+
+.intro.hide{
+
+    opacity:0;
+    transform:scale(1.08);
+
+}
+
+.intro-content{
+
+    max-width:700px;
+
+}
+
+.welcome{
+
+    color:var(--gold);
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+
+}
+
+.intro h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:90px;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+}
+
+.intro h1 span{
+
+    display:block;
+
+    color:var(--gold-light);
+
+    font-size:55px;
+
+    margin:18px 0;
+
+}
+
+.line{
+
+    width:120px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:35px auto;
+
+}
+
+.subtitle{
+
+    font-size:24px;
+
+    color:#d2d2d2;
+
+    letter-spacing:2px;
+
+}
+
+#enterBtn{
+
+    margin-top:55px;
+
+    padding:18px 55px;
+
+    border:1px solid var(--gold);
+
+    background:transparent;
+
+    color:var(--gold);
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    letter-spacing:3px;
+
+    transition:.4s;
+
+}
+
+#enterBtn:hover{
+
+    background:var(--gold);
+
+    color:black;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 30px rgba(212,175,55,.35);
+
+}
+
+/* ===========================
+   Invitation
+=========================== */
+
+.invitation{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:100px 25px;
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+    transition:1.2s;
+
+}
+
+.invitation.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/* ===========================
+   Invitation Content
+=========================== */
+
+.content{
+
+    width:100%;
+    max-width:850px;
+
+    text-align:center;
+
+    padding:70px 40px;
+
+}
+
+.content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:28px;
+
+    color:var(--gold);
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+}
+
+.content h3{
+
+    font-size:20px;
+
+    color:#bfbfbf;
+
+    font-weight:300;
+
+    margin-bottom:40px;
+
+    letter-spacing:1px;
+
+}
+
+.content h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:95px;
+
+    font-weight:600;
+
+    line-height:1.15;
+
+    color:white;
+
+    margin-bottom:30px;
+
+}
+
+.content h1 span{
+
+    display:block;
+
+    font-size:58px;
+
+    color:var(--gold-light);
+
+    margin:18px 0;
+
+}
+
+.text{
+
+    max-width:650px;
+
+    margin:0 auto 60px;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#d7d7d7;
+
+}
+
+/* ===========================
+   Date Box
+=========================== */
+
+.date-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:55px;
+
+    margin:70px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.date-box div{
+
+    min-width:170px;
+
+}
+
+.date-box h4{
+
+    font-size:26px;
+
+    color:white;
+
+    font-weight:400;
+
+    letter-spacing:2px;
+
+}
+
+.middle{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.middle span{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:120px;
+
+    color:var(--gold);
+
+    line-height:1;
+
+}
+
+.middle small{
+
+    margin-top:12px;
+
+    font-size:22px;
+
+    color:#cccccc;
+
+    letter-spacing:2px;
+
+}
+
+/* ===========================
+   Divider
+=========================== */
+
+.divider{
+
+    width:170px;
+
+    height:2px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+    margin:55px auto;
+
+}
+
+/* ===========================
+   Closing Text
+=========================== */
+
+.content h5{
+
+    font-size:22px;
+
+    font-weight:300;
+
+    color:#dddddd;
+
+    line-height:2;
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   Simple Fade Animation
+=========================== */
+
+.visible{
+
+    opacity:1 !important;
+
+    transform:translateY(0) !important;
+
+}
+/* ===========================
+   Background Animation
+=========================== */
+
+@keyframes moveOne{
+
+    0%{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translate(90px,60px) scale(1.15);
+
+    }
+
+    100%{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+}
+
+@keyframes moveTwo{
+
+    0%{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translate(-80px,-60px) scale(1.12);
+
+    }
+
+    100%{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+}
+
+/* ===========================
+   Smooth Fade
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.content{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gold-light);
+
+}
+
+/* ===========================
+   Selection
+=========================== */
+
+::selection{
+
+    background:var(--gold);
+
+    color:#000;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+    .intro h1{
+
+        font-size:72px;
+
+    }
+
+    .content h1{
+
+        font-size:72px;
+
+    }
+
+    .middle span{
+
+        font-size:90px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .intro{
+
+        padding:20px;
+
+    }
+
+    .intro h1{
+
+        font-size:54px;
+
+    }
+
+    .intro h1 span{
+
+        font-size:38px;
+
+    }
+
+    .subtitle{
+
+        font-size:18px;
+
+    }
+
+    #enterBtn{
+
+        width:100%;
+
+        max-width:300px;
+
+        padding:16px;
+
+    }
+
+    .content{
+
+        padding:50px 20px;
+
+    }
+
+    .content h2{
+
+        font-size:20px;
+
+        letter-spacing:3px;
+
+    }
+
+    .content h3{
+
+        font-size:17px;
+
+    }
+
+    .content h1{
+
+        font-size:52px;
+
+    }
+
+    .content h1 span{
+
+        font-size:38px;
+
+    }
+
+    .text{
+
+        font-size:18px;
+
+        line-height:1.8;
+
+    }
+
+    .date-box{
+
+        flex-direction:column;
+
+        gap:30px;
+
+    }
+
+    .date-box h4{
+
+        font-size:22px;
+
+    }
+
+    .middle span{
+
+        font-size:80px;
+
+    }
+
+    .middle small{
+
+        font-size:18px;
+
+    }
+
+    .content h5{
+
+        font-size:18px;
+
+        line-height:1.8;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .welcome{
+
+        font-size:12px;
+
+        letter-spacing:3px;
+
+    }
+
+    .intro h1{
+
+        font-size:42px;
+
+    }
+
+    .content h1{
+
+        font-size:42px;
+
+    }
+
+    .middle span{
+
+        font-size:65px;
+
+    }
+
+    .line{
+
+        width:80px;
+
+    }
+
+    .divider{
+
+        width:120px;
+
+    }
+
+}
